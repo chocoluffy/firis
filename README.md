@@ -1,5 +1,5 @@
 `ACT/parse-data.ipynb`: parse supervisely dataset.  
-    - draw segmentation polygon from opencv detection points. 
+    - draw segmentation polygon from opencv detection points.  
     - save masks. 
 
 `ACT/convert_dataset.sh`: convert dataset into TF-Records, similar to processing PASCAL VOC 2012 dataset. 
