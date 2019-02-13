@@ -15,21 +15,21 @@ FLAGS = tf.app.flags.FLAGS
 
 tf.app.flags.DEFINE_string(
     'train_image_folder',
-    './dataset/source_image/train',
+    './ActData/source_image/train',
     'Folder containing training images')
 tf.app.flags.DEFINE_string(
     'train_image_label_folder',
-    './dataset/segmentation_image/train',
+    './ActData/segmentation_image/train',
     'Folder containing annotations for trainng images')
 
 tf.app.flags.DEFINE_string(
     'val_image_folder',
-    './dataset/source_image/val',
+    './ActData/source_image/val',
     'Folder containing validation images')
 
 tf.app.flags.DEFINE_string(
     'val_image_label_folder',
-    './dataset/segmentation_image/val',
+    './ActData/masks_unique_label_index/val',
     'Folder containing annotations for validation')
 
 tf.app.flags.DEFINE_string(
