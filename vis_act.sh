@@ -7,8 +7,11 @@ DATASET_DIR="datasets"
 # Set up the working directories.
 ACT_FOLDER="ACT"
 EXP_FOLDER="exp/train_on_trainval_set"
+TRAIN_VERSION="train-19-2-12-v3" # init new train folder. REMEMBER delete exp everytime start training.
+MODEL_VERSION="model.ckpt-30000" # eval which model works best.
+
 INIT_FOLDER="${WORK_DIR}/${DATASET_DIR}/${ACT_FOLDER}/${EXP_FOLDER}/init_models"
-TRAIN_LOGDIR="${WORK_DIR}/${DATASET_DIR}/${ACT_FOLDER}/${EXP_FOLDER}/train/model.ckpt-20000"
+TRAIN_LOGDIR="${WORK_DIR}/${DATASET_DIR}/${ACT_FOLDER}/${EXP_FOLDER}/${TRAIN_VERSION}/${MODEL_VERSION}"
 VIS_LOGDIR="${WORK_DIR}/${DATASET_DIR}/${ACT_FOLDER}/${EXP_FOLDER}/vis"
 DATASET="${WORK_DIR}/${DATASET_DIR}/${ACT_FOLDER}/tfrecord"
 
