@@ -8,7 +8,7 @@ DATASET_DIR="datasets"
 ACT_FOLDER="ACT"
 EXP_FOLDER="exp/train_on_trainval_set"
 INIT_FOLDER="${WORK_DIR}/${DATASET_DIR}/${ACT_FOLDER}/${EXP_FOLDER}/init_models"
-TRAIN_LOGDIR="${WORK_DIR}/${DATASET_DIR}/${ACT_FOLDER}/${EXP_FOLDER}/train/model.ckpt-20000"
+TRAIN_LOGDIR="${WORK_DIR}/${DATASET_DIR}/${ACT_FOLDER}/${EXP_FOLDER}/train-19-2-12/model.ckpt-20000"
 
 # currently pick the lastest checkpoint at iteration 20000.
 
