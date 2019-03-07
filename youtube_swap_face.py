@@ -66,7 +66,7 @@ def face_swap(orig_image, down_scale, index):
         mat = umeyama( src_points, dst_points, True )[0:2]
 
         # resized_image = np.float32(resized_image)
-        print(type(resized_image))
+        print(resized_image.shape)
         warped_resized_image = cv2.warpAffine( resized_image, mat, (64,64) ) / 255.0
 
         test_images = numpy.empty( ( 1, ) + warped_resized_image.shape )
