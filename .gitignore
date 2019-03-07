@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 data/
 checkpoint/
 .idea/
@@ -6,3 +7,11 @@ __pycache__/
 
 demo_faceswap_video.py
 predict_128x128.py
+=======
+checkpoint/
+data/
+dataset/
+models/
+utils/
+__pycache__/
+>>>>>>> luffy
