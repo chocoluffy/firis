@@ -44,12 +44,13 @@ except:
 # perform the actual face swap
 def face_swap(orig_image, down_scale, index):
     # extract face from original
-    print("saving this frame: " + str(index))
-    path = './images'
-    cv2.imwrite(os.path.join(path , 'ori' + str(index) + '.jpg'), orig_image)
     facelist = extract_faces(orig_image, 256)
+    if len(facelist) > 0:
+        print("saving this frame: " + str(index))
+        path = './images'
+        # only write frame into file if found faces.
+        cv2.imwrite(os.path.join(path , 'ori' + str(index) + '.jpg'), orig_image)
     result_image = orig_image
-
 
     # iterate through all detected faces
     for (face, resized_image) in enumerate(facelist):
@@ -66,8 +67,8 @@ def face_swap(orig_image, down_scale, index):
         mat = umeyama( src_points, dst_points, True )[0:2]
 
         # resized_image = np.float32(resized_image)
-        print(resized_image)
-        warped_resized_image = cv2.warpAffine( resized_image, mat, (64,64) ) / 255.0
+        print(resized_image[0].shape)
+        warped_resized_image = cv2.warpAffine( resized_image[0], mat, (64,64) ) / 255.0
 
         test_images = numpy.empty( ( 1, ) + warped_resized_image.shape )
         test_images[0] = warped_resized_image
